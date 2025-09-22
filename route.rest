@@ -1,0 +1,52 @@
+LOCALHOST
+### Get all contacts
+GET http://localhost:3000/contact
+
+### Create Contact
+GET http://localhost:3000/contact/ CREATE url HTTP/1.1
+
+###  Get all contacts by id
+GET http://localhost:3000/contact/68c9b505f6c5388de046cd22
+Content-Type: application/json
+
+{  "_id":"68c9b505f6c5388de046cd22",
+    "firstName":"Amina",
+    "lastName":"Okoye",
+    "email":"amina.okoye@example.com",
+    "favouriteColor":"Turquoise",
+    "birthday":"1992-04-15"
+},
+
+
+### Delete Contact
+DELETE  http://localhost:3000/contact/
+
+
+PRODUCTION
+
+GET https://cse341-project-ghpc.onrender.com//contact
+
+### Get all contacts by 
+GET https://cse341-project-ghpc.onrender.com/contact
+
+### Create Contact
+GET  https://cse341-project-ghpc.onrender.com/contact/68c9b505f6c5388de046cd22
+
+Content-Type: application/json
+
+{  "_id":"68c9b505f6c5388de046cd22",
+    "firstName":"Amina",
+    "lastName":"Okoye",
+    "email":"amina.okoye@example.com",
+    "favouriteColor":"Turquoise",
+    "birthday":"1992-04-15"
+},
+
+
+### Delete Contact
+DELETE  https://cse341-project-ghpc.onrender.com/contact/ DELETE url HTTP/1.1
+
+
+
+
+

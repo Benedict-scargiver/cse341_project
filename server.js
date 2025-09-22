@@ -1,11 +1,13 @@
 const express = require('express');
-
+const bodyParser = require('body-parser');
 const mongodb = require('./data/database');
 const app = express();
 
 const PORT = process.env.PORT || 3000;  
 
 app.use("/", require("./routes"));
+
+app.use(bodyParser.json());
 
 mongodb.initDb((err) => {
     if (err) {
@@ -15,4 +17,4 @@ mongodb.initDb((err) => {
             console.log(`Server is running on port ${PORT}`);
         });
     }
-});
+}); 
