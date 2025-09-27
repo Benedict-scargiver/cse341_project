@@ -3,7 +3,19 @@ LOCALHOST
 GET http://localhost:3000/contact
 
 ### Create Contact
-GET http://localhost:3000/contact/ CREATE url HTTP/1.1
+GET http://localhost:3000/contact/68d80349bf7aa4e0268e1839
+
+### Post request to create a new contact
+POST http://localhost:3000/contact HTTP/1.1
+Content-Type: application/json
+
+{
+   "firstName": "Benedict",
+    "lastName": "Adelakun",
+    "email": "benedict.adelakun@example.com",
+    "favouriteColor": "Emerald",
+    "birthday": "1988-11-23"
+}
 
 ###  Get all contacts by id
 GET http://localhost:3000/contact/68c9b505f6c5388de046cd22
@@ -17,9 +29,32 @@ Content-Type: application/json
     "birthday":"1992-04-15"
 },
 
+###put
+POST http://localhost:3000/contact
+Content-Type: application/json
 
-### Delete Contact
-DELETE  http://localhost:3000/contact/
+{
+  "firstName": "Benedict",
+  "lastName": "Adelakun",
+  "email": "benedict.adelakun@example.com",
+  "favouriteColor": "Emerald",
+  "birthday": "1988-11-23"
+}
+
+###PUT 
+PUT http://localhost:3000/contact/68d8065fbf7aa4e0268e183f
+Content-Type: application/json
+
+{
+  "firstName": "Benedict",
+  "lastName": "Adelakun",
+  "email": "benedict.adelakun@example.com",
+  "favouriteColor": "Emerald",
+  "birthday": "1988-11-23"
+}
+
+###DELETE Contact
+DELETE http://localhost:3000/contact/68d7f612bf7aa4e0268e1837   
 
 
 PRODUCTION
